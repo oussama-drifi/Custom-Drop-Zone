@@ -4,9 +4,20 @@
     box-sizing: border-box;
     font-family: popppins, sans-serif;
 }
-
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main-container {
     border: 4px dashed #444;
     padding: 20px;
     border-radius: 10px;
+
+    .content {
+        .icon-wrapper {
+            font-size: 50px;
+        }
+    }
 }
