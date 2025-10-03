@@ -4,3 +4,7 @@
     box-sizing: border-box;
     font-family: popppins, sans-serif;
 }
+
+.main-container {
+    border: 4px dashed #444;
+}
