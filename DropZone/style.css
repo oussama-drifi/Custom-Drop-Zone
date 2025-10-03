@@ -7,4 +7,6 @@
 
 .main-container {
     border: 4px dashed #444;
+    padding: 20px;
+    border-radius: 10px;
 }
