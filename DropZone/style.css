@@ -9,11 +9,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #333;
 }
 .main-container {
-    border: 4px dashed #444;
+    border: 4px dashed #d2d2d2;
     padding: 20px;
     border-radius: 10px;
+    color: #f5f5f5;
 
     .content {
         .icon-wrapper {
