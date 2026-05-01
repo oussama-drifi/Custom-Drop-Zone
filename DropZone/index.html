@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drop Zone</title>
-    <!-- css files -->
     <link rel="stylesheet" href="style.css">
-    <!-- font family -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     </style>
-    <!-- icons library via CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="content">
-            <div class="icon-wrapper">
-                <i class="bi bi-cloud-arrow-down"></i>
+    <div class="page">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+        </button>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Upload Files</h2>
+                <p class="card-description">Drag & drop files here, or click to browse</p>
             </div>
-            <div class="caption">
-                <h4>Drop your file here or Click to select</h4>
+
+            <div class="dropzone" id="dropzone">
+                <input type="file" id="fileInput" multiple accept="image/png,image/jpeg,image/webp,image/avif" hidden>
+                <div class="dropzone-inner">
+                    <div class="dropzone-icon">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                    </div>
+                    <p class="dropzone-label">Drop files here or <span class="browse-link">browse</span></p>
+                    <p class="dropzone-hint">PNG, JPG, JPEG, WEBP, AVIF &mdash; max 10 MB each</p>
+                </div>
+                <div class="dropzone-overlay">
+                    <i class="bi bi-cloud-arrow-down"></i>
+                    <p>Release to upload</p>
+                </div>
             </div>
-            <div class="subtitle">
-                <span>formats accepted (png, jpg, jpeg, webp, avif)</span>
-            </div>
+
+            <div class="file-list" id="fileList"></div>
         </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
